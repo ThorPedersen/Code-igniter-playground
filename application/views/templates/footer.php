@@ -204,10 +204,6 @@
 
 </body>
 <script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/js/google_charts_custom.js"></script>
-
-
 <script async="" src="//www.google-analytics.com/analytics.js"></script>
 <script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -223,15 +219,75 @@
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+<!--<script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/js/google_charts_custom.js"></script>-->
+
 <script type="text/javascript">
 $( document ).ready(function() {
 	
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 	
-	var data = new google.visualization.DataTable();
+	function drawChart(data) {
+
+		if($("#curve_chart").length)
+		{	
+			console.log('curve chat found');
+			$.ajax({
+				url: "https://api.github.com/repos/ThorPedersen/Code-igniter-playground/commits",
+				type: "GET",
+				success: function(data2) { 
+				
+					var data = new google.visualization.DataTable();												
+					data.addColumn('date', 'Time of Day');
+					data.addColumn('number', 'Commits');
+					
+					var result = {};
+					if (data2 instanceof Array) { // Check if input is array.
+						data2.forEach(function (v, i) {
+							if (!result[new Date(v.commit.author.date).toDateString()]) { // Initial object property creation.
+								result[new Date(v.commit.author.date).toDateString()] = [i]; // Create an array for that property.
+							} else { // Same occurrences found.
+								result[new Date(v.commit.author.date).toDateString()].push(i); // Fill the array.
+							}
+						});
+					}							
+					
+					$.each( result, function( key, value ) {					
+						data.addRows([
+							[new Date(key),value.length]
+						])
+					});
+					
+					console.log(data);	
+					
+					var options = {
+					  title: 'Amount of commits over time',
+					  width: 900,
+					  height: 500,
+					  hAxis: {
+						format: 'M/d/yy',
+						gridlines: {count: 15}
+					  },
+					  vAxis: {
+						gridlines: {color: 'none'},
+						minValue: 0
+					  }
+					};
+
+					var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+					chart.draw(data, options);
+
+				}			
+			});				
+		}
+	};
 	
-	drawChart(data);
+	
+	
+	
+	
+	
 });
 </script>
 
