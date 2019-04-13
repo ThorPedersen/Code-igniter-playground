@@ -6,6 +6,7 @@
 	<body> 
 		<div class="container" style="margin-top:10%">
 			<div class="col-md-4 offset-md-4">
+				<?php echo form_open('login/auth'); ?>
 				<form class="form-signin" action="<?php echo site_url('login/auth');?>" method="post">
 				
 				

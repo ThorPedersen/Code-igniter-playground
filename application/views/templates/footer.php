@@ -224,7 +224,15 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="text/javascript">
-	drawChart();
+$( document ).ready(function() {
+	
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawChart);
+	
+	var data = new google.visualization.DataTable();
+	
+	drawChart(data);
+});
 </script>
 
 </html>

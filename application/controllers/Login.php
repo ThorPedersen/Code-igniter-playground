@@ -3,6 +3,7 @@ class Login extends CI_Controller{
   function __construct(){
     parent::__construct();
     $this->load->model('login_model');
+	$this->load->helper('form');
   }
  
   function index(){
@@ -26,18 +27,7 @@ class Login extends CI_Controller{
         );
         $this->session->set_userdata($sesdata);
 
-        // access login for admin
-        if($level === '1'){
-            redirect('dashboard');
- 
-        // access login for staff
-        }elseif($level === '2'){
-            redirect('dashboard/staff');
- 
-        // access login for author
-        }else{
-            redirect('dashboard/author');
-        }
+        redirect('dashboard');
 
     }else{
         echo $this->session->set_flashdata('msg','Username or Password is Wrong');
