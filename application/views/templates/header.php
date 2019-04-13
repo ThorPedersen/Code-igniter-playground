@@ -16,20 +16,8 @@
 	<link rel="stylesheet" href="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/css/AdminLTE.min.css">
 	<link rel="stylesheet" href="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/css/skins/_all-skins.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-	<script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/js/google_charts_custom.js"></script>
-	
-	
-	<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
-	
-<script type="text/javascript">
-$( document ).ready(function() {
-	drawChart();
-});
-</script>
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">	
+	<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>	
 </head>
 
 <body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
@@ -81,7 +69,7 @@ $( document ).ready(function() {
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <!--<img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">-->
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -93,7 +81,7 @@ $( document ).ready(function() {
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        <!--<img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">-->
                       </div>
                       <h4>
                         Developers
@@ -105,7 +93,7 @@ $( document ).ready(function() {
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <!--<img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">-->
                       </div>
                       <h4>
                         Sales Department
@@ -117,7 +105,7 @@ $( document ).ready(function() {
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                         <!--<img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">-->
                       </div>
                       <h4>
                         Reviewers
@@ -256,7 +244,7 @@ $( document ).ready(function() {
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <!--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
 
                 <p>
                  <?php echo $this->session->userdata('username');?>

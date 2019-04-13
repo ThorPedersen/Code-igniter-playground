@@ -1,4 +1,3 @@
-	
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
 				<b>Version</b> 2.4.0
@@ -6,8 +5,6 @@
 			<strong>Copyright © 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
 			reserved.
 		</footer>
-		
-		
 		
 		<aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
@@ -206,6 +203,10 @@
 </div>
 
 </body>
+<script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/js/google_charts_custom.js"></script>
+
 
 <script async="" src="//www.google-analytics.com/analytics.js"></script>
 <script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/bower_components/jquery/dist/jquery.min.js"></script>
@@ -221,5 +222,9 @@
 <script src="/projects/CodeIgniter_project1-3.1.10/AdminLTE-2.4.10/dist/js/demo.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+	drawChart();
+</script>
 
 </html>
